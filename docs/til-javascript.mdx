@@ -1,0 +1,40 @@
+---
+name: JavaScript
+menu: TIL
+---
+
+# Today I Learned JavaScript
+
+## 20190612
+
+Calling a function within a template literal is a thing. [ [CodePen Demo](https://codepen.io/aaronkahlhamer/pen/RzPwWb) ]
+
+```
+// complete the sentence
+const finishSentence = function() {
+  return `was here.`;
+};
+
+// create the content and complete the sentence
+const newContent = document.createTextNode(`
+  Aaron ${finishSentence()}
+`);
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+// create a new div element
+const newDiv = document.createElement("div");
+
+// add the text node to the newly created div
+newDiv.appendChild(newContent);
+
+// add the newly created element and its content into the DOM
+const currentDiv = document.getElementById("div1");
+document.body.insertBefore(newDiv, currentDiv);
+```
+
+> “I can do anything I want to in-between those two curly braces.” – [The introduction to React you've been missing - Kent C. Dodds](https://youtu.be/SAIdyBFHfVU?t=2015);
+
+---
